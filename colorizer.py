@@ -133,3 +133,12 @@ def make_style_colorizer(attr):
     def _(text):
         return colorizer.ansiformat(attr, text)
     return _
+
+
+def return_color(color):
+    def _(func):
+        def __(*args, **kwargs):
+            return_value = func(*args, **kwargs)
+            return colorizer.colorize(color, return_value)
+        return __
+    return _
