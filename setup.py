@@ -10,7 +10,7 @@ VERSION = "0.1.0"
 
 
 setup(
-    name='colorizer',
+    name='colorizer-py',
     version=VERSION,
     url="https://github.com/MrKiven/colorizer",
     license="MIT",
