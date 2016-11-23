@@ -116,6 +116,20 @@ def make_colorizer(color):
 
         print "It's either " + green('OK') + ' or ' + red('Oops')
     """
-    def inner(text):
+    def _(text):
         return colorizer.colorize(color, text)
-    return inner
+    return _
+
+
+def make_style_colorizer(attr):
+    """Format ``text`` with a color and/or some attributes.
+
+    For example:
+
+        bold_green = make_style_colorizer("*darkgreen*")
+
+        print "This is blod green " + bold_green('Hello world')
+    """
+    def _(text):
+        return colorizer.ansiformat(attr, text)
+    return _
