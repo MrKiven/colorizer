@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 
 """
-Colorizer manages your requirements files.
+The formatter for ANSI colored console output is heavily based on Pygments
+terminal colorizing code.
 """
 
 from setuptools import setup
 
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 
 
 setup(
